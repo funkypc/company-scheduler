@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.cell.*?> 
+<?import javafx.collections.*?> 
+<?import com.charlesplett.companyscheduler.*?>
+
+<VBox id="VBox" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EditAppointmentController">
+    <HBox alignment="center_left" spacing="10">
+        <padding>
+            <Insets top="10" left="10" bottom="10" right="10"/>
+        </padding>
+        <ImageView>
+            <Image url="CS48.png"/>
+        </ImageView>
+        <Label fx:id="screenTitle" text="New Appointment">
+            <font>
+                <Font size="22"/>
+            </font>
+        </Label>
+    </HBox>
+    <GridPane alignment="top_left" hgap="10" vgap="10">
+        <padding>
+            <Insets top="10" left="20" bottom="10" right="20" />
+        </padding>
+        <Label text="Appointment ID" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="appointmentId" GridPane.rowIndex="1" GridPane.columnIndex="1" GridPane.columnSpan="4" minWidth="200" disable="true"/>
+        <Label text="Title" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="appointmentTitle" GridPane.rowIndex="2" GridPane.columnIndex="1" GridPane.columnSpan="4" minWidth="200"/>
+        <Label text="Description" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <TextField fx:id="appointmentDescription" GridPane.rowIndex="3" GridPane.columnIndex="1" GridPane.columnSpan="4" minWidth="200"/>
+        <Label text="Location" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <TextField fx:id="appointmentLocation" GridPane.rowIndex="4" GridPane.columnIndex="1" GridPane.columnSpan="4" minWidth="200"/>
+        <Label text="Contact" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="appointmentContact" GridPane.rowIndex="5" GridPane.columnIndex="1" GridPane.columnSpan="4"/>
+        <Label text="Type" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+        <TextField fx:id="appointmentType" GridPane.rowIndex="6" GridPane.columnIndex="1" GridPane.columnSpan="4" minWidth="200"/>
+        <Label text="Start Date" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+        <DatePicker fx:id="appointmentStartDate" GridPane.rowIndex="7" GridPane.columnIndex="1" GridPane.columnSpan="3" prefWidth="110"/>
+        <Spinner fx:id="appointmentStartTime" GridPane.rowIndex="7" GridPane.columnIndex="4" prefWidth="75" editable="true"/>
+        <Label text="End Date" GridPane.rowIndex="8" GridPane.columnIndex="0"/>
+        <DatePicker fx:id="appointmentEndDate" GridPane.rowIndex="8" GridPane.columnIndex="1" GridPane.columnSpan="3" prefWidth="110"/>
+        <Spinner fx:id="appointmentEndTime" GridPane.rowIndex="8" GridPane.columnIndex="4" prefWidth="75" editable="true"/>
+        <Label text="Customer" GridPane.rowIndex="9" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="appointmentCustomer" GridPane.rowIndex="9" GridPane.columnIndex="1" GridPane.columnSpan="4"/>
+        <Label text="User" GridPane.rowIndex="10" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="appointmentUser" GridPane.rowIndex="10" GridPane.columnIndex="1" GridPane.columnSpan="4"/>
+    </GridPane>
+    <HBox alignment="top_center" spacing="10">
+        <padding>
+            <Insets top="10" left="10" bottom="10" right="10" />
+        </padding>
+        <Button fx:id="saveButton" prefWidth="90" text="Save" onAction="#save"/>
+        <Button fx:id="cancelButton" prefWidth="90" text="Cancel" onAction="#cancel"/>
+    </HBox>
+</VBox>

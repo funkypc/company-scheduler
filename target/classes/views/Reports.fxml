@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.cell.*?> 
+<?import javafx.collections.*?> 
+<?import com.charlesplett.companyscheduler.*?>
+
+<VBox id="VBox" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportsController">
+    <HBox alignment="center_left" spacing="10">
+        <padding>
+            <Insets top="10" left="10" bottom="10" right="10"/>
+        </padding>
+        <ImageView>
+            <Image url="CS48.png"/>
+        </ImageView>
+        <Label fx:id="screenTitle" text="Reports">
+            <font>
+                <Font size="22"/>
+            </font>
+        </Label>
+    </HBox>
+    <VBox>
+        <HBox alignment="top_right" spacing="10">
+            <padding>
+                <Insets top="10" left="10" bottom="10" right="10" />
+            </padding>
+            <ComboBox fx:id="reportComboBox" value="Number of Appointments">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Number of Appointments"/>
+                    <String fx:value="Contact Schedules" />
+                    <String fx:value="Customer Schedules" />
+                </FXCollections>
+              </items>
+            </ComboBox>
+            <Button fx:id="generateButton" prefWidth="90" text="Generate" onAction="#generateReport"/>
+        </HBox>
+        <padding>
+            <Insets left="10" right="10"/>
+        </padding>
+        <TextArea fx:id="reportTextArea"/>
+        <HBox alignment="top_right" spacing="10">
+            <padding>
+                <Insets top="10" left="10" bottom="10" right="10" />
+            </padding>
+            <Button fx:id="exitButton" prefWidth="90" text="Exit" onAction="#exit"/>
+        </HBox>
+    </VBox>
+</VBox>

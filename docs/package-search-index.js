@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"com.charlesplett.companyscheduler"},{"l":"controller"},{"l":"dao"},{"l":"model"}]

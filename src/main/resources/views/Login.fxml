@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.cell.*?> 
+<?import javafx.collections.*?> 
+<?import com.charlesplett.companyscheduler.*?>
+
+<VBox id="VBox" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+    <HBox alignment="center_left" spacing="10">
+        <padding>
+            <Insets top="10" left="10" bottom="10" />
+        </padding>
+        <ImageView>
+            <Image url="CS48.png"/>
+        </ImageView>
+        <Label fx:id="loginLabel" text="Login">
+            <font>
+                <Font size="22"/>
+            </font>
+        </Label>
+    </HBox> 
+    <GridPane alignment="top_center" hgap="10" vgap="10">
+        <Label fx:id="usernameLabel" text="Username" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <Label fx:id="passwordLabel" text="Password" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="usernameField" prefWidth="125.0" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        <PasswordField fx:id="passwordField" prefWidth="125.0" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+        <HBox alignment="top_center" spacing="10" GridPane.rowIndex="3" GridPane.rowSpan="2" GridPane.columnSpan="2">
+            <padding>
+                <Insets top="10" bottom="10"/>
+            </padding>
+            <Button fx:id="loginButton" prefWidth="100" text="Login" defaultButton="true" onAction="#login"/>
+            <Button fx:id="cancelButton" prefWidth="100" text="Cancel" onAction="#exit"/>
+        </HBox>
+        <Label fx:id="userCountry" text="User Locale" alignment="center" GridPane.rowIndex="5" GridPane.columnIndex="0" GridPane.columnSpan="2"/>
+    </GridPane>
+</VBox>
